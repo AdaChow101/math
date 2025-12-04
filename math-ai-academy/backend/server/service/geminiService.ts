@@ -78,7 +78,7 @@ class GeminiService {
       return response.data;
     } catch (error) {
       const axiosError = error as AxiosError;
-      const errorMsg = axiosError.response?.data?.error?.message || axiosError.message;
+      const errorMsg = (axiosError.response?.data as any)?.error?.message || axiosError.message;
       console.error('Gemini API 调用失败:', errorMsg);
       throw new Error(`AI 服务错误: ${errorMsg}`);
     }
@@ -166,3 +166,4 @@ class GeminiService {
 // 导出单例（后端其他文件导入使用）
 
 export default new GeminiService();
+
