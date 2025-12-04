@@ -24,11 +24,11 @@
     },
     {
       "source": "/assets/(.*)",
-      "destination": "/frontend/dist/assets/$1" 
+      "destination": "/assets/$1" // 对应 frontend/dist/assets/
     },
     {
       "source": "/(.*)",
-      "destination": "/frontend/dist/index.html" 
+      "destination": "/index.html" // 对应 frontend/dist/index.html
     }
   ],
   "headers": [
@@ -64,6 +64,7 @@
     }
   ]
 }
+
 
 
 
