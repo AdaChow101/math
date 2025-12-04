@@ -18,15 +18,12 @@
     }
   ],
   "rewrites": [ 
-    // 1. API 代理：将所有 /api/* 的请求重写到后端服务入口
-    // Vercel 会自动将此路径解析为 Serverless Function
+
     {
       "source": "/api/(.*)",
       "destination": "/backend/server/index.js"
     },
-    // 2. SPA 路由：这是关键的 SPA 历史记录回退规则
-    // Vercel 会自动将 /frontend/dist 解析为静态构建产物
-    // Vercel 默认会将静态构建的根路径识别为 /
+
     {
       "source": "/(.*)",
       "destination": "/index.html" 
@@ -65,3 +62,4 @@
     }
   ]
 }
+
