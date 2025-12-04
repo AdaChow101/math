@@ -18,12 +18,12 @@
     }
   ],
   "rewrites": [ 
-    // 1. API 代理：将所有 /api/* 的请求重写到后端服务入口
+
     {
       "source": "/api/(.*)",
       "destination": "/backend/server/index.js"
     },
-    // 2. SPA 路由：将所有其他请求（包括深层链接如 /dashboard）重写到前端 index.html
+
     {
       "source": "/(.*)",
       "destination": "/frontend/dist/index.html"
@@ -61,4 +61,5 @@
       ]
     }
   ]
+
 }
