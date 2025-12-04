@@ -164,4 +164,5 @@ class GeminiService {
 }
 
 // 导出单例（后端其他文件导入使用）
-export default new GeminiService();export default new GeminiService();
+
+export default new GeminiService();
