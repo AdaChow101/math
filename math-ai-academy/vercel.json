@@ -18,12 +18,10 @@
     }
   ],
   "rewrites": [ 
-
     {
       "source": "/api/(.*)",
       "destination": "/backend/server/index.js"
     },
-
     {
       "source": "/(.*)",
       "destination": "/index.html" 
